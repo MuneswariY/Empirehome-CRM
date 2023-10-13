@@ -27,6 +27,11 @@ public class Loginpage  extends Basetest{
 		return Dataprovider(sheetname1);
 	}
 
+	private Object[][] Dataprovider(String sheetname12) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	@BeforeMethod
 	public  void setup() {
 		initialization();
@@ -54,6 +59,11 @@ public class Loginpage  extends Basetest{
 
 	@AfterMethod
 	public void teardown() {
+		
+	}
+
+	public void Loginverification() {
+		// TODO Auto-generated method stub
 		
 	}
 }

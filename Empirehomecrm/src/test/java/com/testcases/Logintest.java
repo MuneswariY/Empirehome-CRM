@@ -37,7 +37,7 @@ public class Logintest extends Basetest {
 	}
 
 	@AfterMethod
-	public void teardown() {
+	public <extentreports> void teardown() {
 		  extentreports.flush();
 		//driver.close();
 
