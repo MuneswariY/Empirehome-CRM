@@ -1,5 +1,6 @@
 package com.testcases;
 
+import org.bouncycastle.jcajce.provider.asymmetric.ec.GMCipherSpi.SM2;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -9,7 +10,7 @@ import com.pageobjects.Loginpage;
 
 import dev.failsafe.internal.util.Assert;
 
-public class Stack_moving<StockmoveFunctionality>  extends Basetest{
+public class Stack_moving<StockmoveFunctionality> extends Basetest{
 	Loginpage LP ;
 	StockmoveFunctionality SMF;
 	
@@ -18,7 +19,7 @@ public class Stack_moving<StockmoveFunctionality>  extends Basetest{
 	}
 		
 @BeforeMethod
-public void Data() {
+public  void Data() {
 	initialization();
 	LP = new Loginpage();
 	StockmoveFunctionality SMF= new  StockmoveFunctionality();
