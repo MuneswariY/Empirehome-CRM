@@ -52,10 +52,14 @@ public class Loginpage  extends Basetest{
 		AssertJUnit.assertEquals(urltest, "http://empirehome.myprojectsonline.co.in/Inventory/All");
 	}
 
-	void verifyLogin() {
-		// TODO Auto-generated method stub
+	
+	
 		
-	}
+	
+
+
+
+	
 
 	@AfterMethod
 	public void teardown() {
