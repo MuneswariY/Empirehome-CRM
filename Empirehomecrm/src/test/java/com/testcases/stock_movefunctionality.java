@@ -10,12 +10,13 @@ import com.pageobjects.Loginpage;
 
 import dev.failsafe.internal.util.Assert;
 
-public class Stack_moving<StockmoveFunctionality> extends Basetest{
+public class stock_movefunctionality<StockmoveFunctionality> extends Basetest {
 	Loginpage LP ;
-	StockmoveFunctionality SMF;
+	stock_movefunctionality SMF;
+
 	
 	public void Stock_moving () {
-		super();
+		
 	}
 		
 @BeforeMethod
@@ -24,11 +25,16 @@ public  void Data() {
 	LP = new Loginpage();
 	StockmoveFunctionality SMF= new  StockmoveFunctionality();
 }
+public void initialization() {
+	// TODO Auto-generated method stub
+	
+}
+
 @Test
 public void Data1() throws Throwable {
 	LP.Loginverification();
 	  SMF.verifyStockmove();
-	String urltest = driver.getCurrentUrl();
+	String urltest =  driver.getCurrentUrl();
 	Assert.asserteEquals(urltest, "http://empirehome.myprojectsonline.co.in/Inventory/StockMovement");
 
 }
