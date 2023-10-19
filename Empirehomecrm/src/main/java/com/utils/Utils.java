@@ -10,4 +10,9 @@ public class Utils {
 		
 	}
 
+	public static void actions(WebDriver driver, WebElement designation) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
