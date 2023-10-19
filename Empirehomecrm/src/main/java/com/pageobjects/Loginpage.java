@@ -61,6 +61,11 @@ public class Loginpage  extends Basetest{
 
 	
 
+	private void verifyLogin() {
+		// TODO Auto-generated method stub
+		
+	}
+
 	@AfterMethod
 	public void teardown() {
 		

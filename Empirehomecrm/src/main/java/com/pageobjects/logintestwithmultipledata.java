@@ -16,8 +16,8 @@ public class logintestwithmultipledata  extends Basetest{
 		LF = new logintestwithmultipledata();
 		
 	}
-      private void initialization() {
-		// TODO Auto-generated method stub
+      public void initialization() {
+	
 		
 	}
 	@Test

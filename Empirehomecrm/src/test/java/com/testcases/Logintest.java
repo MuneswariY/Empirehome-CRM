@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import com.base.Basetest;
 import com.pageobjects.Loginfunctionality;
 
-public class Logintest extends Basetest {
+public class Logintest<lf> extends Basetest {
 
 	Loginfunctionality lf;
 
@@ -28,7 +28,7 @@ public class Logintest extends Basetest {
 
 	@Test
 
-	public void loginvalidation() {
+	public  void loginvalidation() {
 		lf.verifylogin();
 		String urltest = driver.getCurrentUrl();
 		Assert.assertEquals(urltest, "http://empirehome.myprojectsonline.co.in/EmpireHome/Dashboard");
@@ -37,9 +37,8 @@ public class Logintest extends Basetest {
 	}
 
 	@AfterMethod
-	public <extentreports> void teardown() {
-		  extentreports.flush();
-		//driver.close();
+	public void teardown() {
+	
 
 	}
 }

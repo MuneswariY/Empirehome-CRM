@@ -1,13 +1,14 @@
 package com.testcases;
 
 import org.testng.AssertJUnit;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.base.Basetest;
 import com.pageobjects.Employeeregistration;
 import com.pageobjects.Login_page02;
-import com.pageobjects.loginpadefunctionality;
+
 
 import dev.failsafe.internal.util.Assert;
 
@@ -47,6 +48,10 @@ public class Employee_Test  extends Basetest{
 		
 		
 	}
+		@AfterMethod
+		public void teardown() {
+			
+		}
 	
 }
 
