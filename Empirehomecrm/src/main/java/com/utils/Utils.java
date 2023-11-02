@@ -15,4 +15,9 @@ public class Utils {
 		
 	}
 
+	public static void dropdowns(WebElement selectcategory, String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

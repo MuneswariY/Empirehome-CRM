@@ -52,7 +52,7 @@ public class CategoriesFunctionality extends Basetest{
 		
 		Thread.sleep(2000);
 		addnewcategory.click();
-		categoryname.sendKeys(prop.getProperty("caregoryName"));
+		categoryname.sendKeys(prop.getProperty("categoryName"));
 		Thread.sleep(2000);
 		savebutton.click();
 		
@@ -66,8 +66,7 @@ public class CategoriesFunctionality extends Basetest{
 
 		edit.click();
 		
-//		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(15));
-//		wait.until(ExpectedConditions.invisibilityOf(loader));
+
 		
 		categoryname.clear();
 		categoryname.sendKeys(prop.getProperty("editcategoryName"));
@@ -87,37 +86,6 @@ public class CategoriesFunctionality extends Basetest{
 		search.sendKeys(Keys.ENTER);
 		
 		Thread.sleep(2000);
-		
-		  
-//		Utils.dropdowns(length, "100");
-//		
-//		 List<WebElement> rows = driver.findElements(By.xpath("//table[@id='mydatatable']//tbody//tr"));
-//		 int rowsize = rows.size();
-//		 System.out.println(rowsize);
-//		 
-//		  for(int i=1;i<rowsize;i++) {
-//			 
-//			 List<WebElement> cells = rows.get(i).findElements(By.xpath(".//td"));
-//			 
-//		     for(WebElement cell:cells) {
-//		    	  
-//		    String	countries =cell.getText();
-//		    System.out.println(countries);
-//		    
-//		    
-//				   if(countries.equals("editcategoryName")) {
-//				    	
-//				     WebElement checkbox = rows.get(i).findElement(By.xpath(".//i[@class='fa fa-trash-o']"));
-//				    	checkbox.click();
-//				    	break;
-//				    }
-//			 }
-//			 
-//		 
-//	
-//		 }
-		
-		
 		delete.click();
 		Thread.sleep(2000);
 		alert.click();
