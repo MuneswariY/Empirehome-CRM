@@ -1,28 +1,51 @@
 package com.utils;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
+import org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.xssf.usermodel.XSSFSheet;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class Utils {
-
-	public static void mouseHoverandClickOnElement(WebDriver driver, WebElement addnew) {
-		// TODO Auto-generated method stub
+public static String[][] Customerdata(String sheetname) throws Throwable{
+		
+		File file =new File("./src/main/java/com/testdata/testcase emp.xlsx");
+		FileInputStream stream = new FileInputStream(file);
+		XSSFWorkbook workbook =new XSSFWorkbook(stream);
+		XSSFSheet sheet = workbook.getSheet(sheetname);
+		int rows = sheet.getPhysicalNumberOfRows();
+		int cells =sheet.getRow(1).getLastCellNum();
+		String[][] data = new String[rows-1][cells];
+		for(int i=0;i<rows-1;i++) {
+			for(int j=0;j<cells;j++) {
+				
+				DataFormatter df = new DataFormatter();
+				data[i][j] = df.formatCellValue(sheet.getRow(i+1).getCell(j));
+			}
+		}
+		return data;
 		
 	}
 
-	public static void actions(WebDriver driver, WebElement designation) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public static void dropdowns(WebElement selectcategory, String string) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public static void scroll() {
-		// TODO Auto-generated method stub
-		
-	}
-
+public static void takescreenshot(WebDriver driver,String path) throws Throwable {
+	// Take screenshot
+			TakesScreenshot ts =(TakesScreenshot)driver;
+			File src = ts.getScreenshotAs(OutputType.FILE);
+			
+			// Save screenshot to a specific location
+			File trgt = new File(path);
+			FileUtils.copyFile(src, trgt);
 }
+}
+
+		
+	
+
+

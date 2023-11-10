@@ -56,7 +56,7 @@ public class Categories_Test  extends Basetest{
 		ctf.verifyeditcategory();
 		
 		String urltest = driver.getCurrentUrl();
-		AssertJUnit.assertEquals(urltest, "http://empirehome.myprojectsonline.co.in/Master/Categories");
+		Assert.assertEquals(urltest, "http://empirehome.myprojectsonline.co.in/Master/Categories");
 	}
 	
 	@Test (priority = 3)

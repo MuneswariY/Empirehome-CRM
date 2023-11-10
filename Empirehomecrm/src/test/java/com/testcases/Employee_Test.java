@@ -44,7 +44,7 @@ public class Employee_Test  extends Basetest{
 			
 			ef.verifyemployee();
 			String urltest =driver.getCurrentUrl();
-			AssertJUnit.assertEquals(urltest, "http://empirehome.myprojectsonline.co.in/Master/Holidays");
+			Assert.assertEquals(urltest, "http://empirehome.myprojectsonline.co.in/Master/Holidays");
 		
 		
 	}

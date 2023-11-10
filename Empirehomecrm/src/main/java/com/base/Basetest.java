@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.EventListener;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -11,7 +12,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
+import com.utils.Eventlistener;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -21,6 +24,9 @@ public class Basetest {
 	FileInputStream file;
 	public static WebDriver driver;
 	//protected ExtentReports extentreports;
+	public static EventFiringWebDriver e_driver;
+	public static Eventlistener listenerss;
+	
 
 	public Basetest() {
 
@@ -48,6 +54,7 @@ public class Basetest {
 	}
 
 	public void initialization() {
+		WebDriverManager.chromedriver().setup();
 
 		String browsername = prop.getProperty("browser");
 		if (browsername.equals("chrome")) {
@@ -58,6 +65,14 @@ public class Basetest {
 
 			driver = new FirefoxDriver();
 		}
+		e_driver = new EventFiringWebDriver(driver);
+		// Now create object of EventListerHandler to register it with EventFiringWebDriver
+		listenerss = new Eventlistener();
+		e_driver.register(listenerss);
+		driver = e_driver;
+
+		
+		
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(15));
 		driver.get(prop.getProperty("url"));

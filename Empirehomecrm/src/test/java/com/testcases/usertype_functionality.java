@@ -27,7 +27,7 @@ public class usertype_functionality extends Basetest{
 	@Test
 	public void verifyusertypetestm() throws Exception {
 	lp.verifylogin();
-	((Object) user).verifyusertype();
+	user.verifyusertype();
 	String urltest = driver.getCurrentUrl();
 	Assert.assertEquals(urltest, "http://empirehome.myprojectsonline.co.in/Master/Usertypes");
 	}

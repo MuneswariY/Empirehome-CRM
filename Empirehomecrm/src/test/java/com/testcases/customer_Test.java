@@ -41,7 +41,7 @@ public class customer_Test extends Basetest {
 		Customer.Customervalidation();
 
 		String urltest = driver.getCurrentUrl();
-		AssertJUnit.assertEquals(urltest, "http://empirehome.myprojectsonline.co.in/User/CustomerList");
+		Assert.assertEquals(urltest, "http://empirehome.myprojectsonline.co.in/User/CustomerList");
 
 	}
 

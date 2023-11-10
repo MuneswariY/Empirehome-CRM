@@ -36,14 +36,13 @@ public void Data1() throws Throwable {
 	LP.Loginverification();
 	  SMF.verifyStockmove();
 	String urltest =  driver.getCurrentUrl();
-	AssertJUnit.assertEquals(urltest, "http://empirehome.myprojectsonline.co.in/Inventory/StockMovement");
+	Assert.assertEquals(urltest, "http://empirehome.myprojectsonline.co.in/Inventory/StockMovement");
 
 }
 
-private void verifyStockmove() {
-	// TODO Auto-generated method stub
+
 	
-}
+
 
 @AfterMethod
 public void teardown() {
