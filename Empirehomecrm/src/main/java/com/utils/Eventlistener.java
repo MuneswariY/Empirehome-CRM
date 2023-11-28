@@ -145,7 +145,7 @@ public class Eventlistener  extends Basetest implements WebDriverEventListener{
 	@Override
 	public void onException(Throwable throwable, WebDriver driver) {
 		try {
-			Utils.takescreenshot(driver, "./target/m.png");
+			Utils.takescreenshot(driver, "./Screenshot/m.png");
 		} catch (Throwable e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

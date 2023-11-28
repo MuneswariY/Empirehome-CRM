@@ -43,7 +43,11 @@ public static void takescreenshot(WebDriver driver,String path) throws Throwable
 			File trgt = new File(path);
 			FileUtils.copyFile(src, trgt);
 }
+
+
+	
 }
+
 
 		
 	
